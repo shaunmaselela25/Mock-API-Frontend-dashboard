@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">User Dashboard</h1>
+
+    <!-- Alert Section -->
+    <div id="alertBox" class="alert d-none" role="alert"></div>
+
+    <!-- Add User Form -->
+    <div class="card mb-4">
+      <div class="card-header">Add User</div>
+      <div class="card-body">
+        <form id="userForm">
+          <div class="row">
+            <div class="col-md-5">
+              <input type="text" class="form-control mb-2" id="name" placeholder="Name" required />
+            </div>
+            <div class="col-md-5">
+              <input type="email" class="form-control mb-2" id="email" placeholder="Email" required />
+            </div>
+            <div class="col-md-2">
+              <button type="submit" class="btn btn-primary w-100">Add</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- User Table -->
+    <div class="card">
+      <div class="card-header">User List</div>
+      <div class="card-body">
+        <table class="table table-hover table-bordered align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th style="width: 150px;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+  <div class="modal fade" id="editModal" tabindex="-1">
+    <div class="modal-dialog">
+      <form id="editUserForm" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="editUserId" />
+          <div class="mb-3">
+            <label for="editName" class="form-label">Name</label>
+            <input type="text" id="editName" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label for="editEmail" class="form-label">Email</label>
+            <input type="email" id="editEmail" class="form-control" required />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Update</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
