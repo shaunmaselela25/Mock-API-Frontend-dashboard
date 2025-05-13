@@ -99,9 +99,11 @@ mockoon-cli start --data ./your-mockoon-environment.json --port 4000
 ```bash
 mkdir user-dashboard && cd user-dashboard
 nano index.html
+nano style.css
+nano script.js
 ```
 
-Paste the code from `index.html` (included in this repository).
+Paste the code from `index.html`, 'style.css', 'script.js' (included in this repository).
 
 #### 2. Run a Local Server
 
